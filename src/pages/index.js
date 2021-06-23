@@ -1,7 +1,15 @@
 import React from 'react';
 
+// Components
+import Hero from '../components/Hero';
+
 const IndexPage = () => {
-  return <div>Home</div>;
+  // This is the landing page
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default IndexPage;
