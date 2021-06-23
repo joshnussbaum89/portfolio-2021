@@ -6,16 +6,23 @@ const GlobalStyles = createGlobalStyle`
     
     :root {
         ${'' /* Colors */}
-
+        --lightBlue: #474f97;
+        --blue: #1a237e;
+        --darkBlue: #121858;
         ${'' /* Font Sizes */}
 
         ${'' /* Shadows */}
-
-        ${'' /* Screen Sizes */}
     }
 
     body {
+        margin: 0 1rem;
         font-family: 'Rubik', sans-serif;
+    }
+
+    @media (min-width: 768px) {
+        body {
+            margin: 0 3rem;
+        }
     }
 `;
 
