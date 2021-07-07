@@ -6,11 +6,23 @@ const NavStyles = styled.nav`
   align-items: center;
   justify-content: space-between;
 
+  h1 {
+    background: -webkit-linear-gradient(210deg, var(--purple), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   ul {
-    display: flex;
+    display: none;
     list-style: none;
     li {
       padding: 0 1.4rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    ul {
+      display: flex;
     }
   }
 `;
@@ -18,7 +30,7 @@ const NavStyles = styled.nav`
 const Nav = () => {
   return (
     <NavStyles>
-      <h1>Josh</h1>
+      <h1>Josh Nussbaum</h1>
       <ul>
         <li>Home</li>
         <li>About</li>

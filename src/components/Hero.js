@@ -3,22 +3,43 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 const HeroStyles = styled.div`
-  margin: 2rem 0 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 1rem;
   align-items: center;
+  justify-items: center;
+  margin: 2rem 0;
+  grid-gap: 1rem;
 
+  .hero-card {
+    margin: 2rem 0;
+  }
   .hero-card:first-child {
-    width: 100%;
+    text-align: center;
+    /* h3 {
+      font-weight: 200;
+    } */
+  }
+
+  button {
+    color: white;
+    background: linear-gradient(210deg, var(--purple), var(--blue));
+    border: none;
+    border-radius: 5px;
+    padding: 1.5rem;
+    cursor: pointer;
+  }
+
+  .hero-card-image {
+    margin: 2rem 0;
+    background: linear-gradient(210deg, var(--purple), var(--blue));
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
   }
 
   @media (min-width: 768px) {
-    margin: 5rem 0 0;
     grid-template-columns: 2fr 1fr;
 
     .hero-card:first-child {
-      width: 70%;
+      text-align: left;
     }
   }
 `;
@@ -28,11 +49,11 @@ const Hero = ({ heroImage }) => {
   return (
     <HeroStyles className='hero'>
       <div className='hero-card'>
-        <h2>Hi! I'm Josh Nussbaum</h2>
+        <h2>Hi, I'm Josh</h2>
         <h3>Frontend Developer</h3>
         <p>
-          High level experience in web development and user first design.
-          Creative design, accessible applications
+          High level experience in web development and user first applications.
+          Creative design, accessible experiences.
         </p>
         <button>Contact Me</button>
       </div>
