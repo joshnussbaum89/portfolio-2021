@@ -15,9 +15,6 @@ const HeroStyles = styled.div`
   }
   .hero-card:first-child {
     text-align: center;
-    /* h3 {
-      font-weight: 200;
-    } */
   }
 
   button {
@@ -35,7 +32,7 @@ const HeroStyles = styled.div`
     border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     grid-template-columns: 2fr 1fr;
 
     .hero-card:first-child {

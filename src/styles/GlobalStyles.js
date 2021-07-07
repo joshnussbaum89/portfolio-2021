@@ -35,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: var(--medium);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
         body {
             margin: 0 4rem;
         }
