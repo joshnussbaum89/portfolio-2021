@@ -19,8 +19,8 @@ const GlobalStyles = createGlobalStyle`
         margin: 0 1rem;
     }
 
-    h2, h3 {
-        margin: 2rem 0;
+    h1 {
+        font-size: var(--medium);
     }
 
     h2 {
@@ -30,7 +30,11 @@ const GlobalStyles = createGlobalStyle`
     h3 {
         font-size: var(--large);
     }
-    
+
+    h2, h3 {
+        margin: 2rem 0;
+    }
+
     p {
         font-size: var(--medium);
     }
