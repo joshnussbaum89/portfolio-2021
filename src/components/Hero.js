@@ -1,34 +1,30 @@
 import React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
 
 const HeroStyles = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
-  margin: 2rem 0;
+  text-align: center;
+  margin: 4rem 0;
   grid-gap: 1rem;
 
+  /* TODO */
+  /* Social icons should pop out from a button on the bottom of page */
+
+  .hero-social-container {
+    display: none;
+  }
   .hero-card {
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
   .hero-card:first-child {
     text-align: center;
-  }
-
-  .hero-card:last-child:before {
-    position: absolute;
-    content: '';
-    width: 120%;
-    height: 0.2px;
-    border-radius: 10px;
-    background: black;
-    bottom: 80px;
-    right: 0px;
-    transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
   }
 
   button {
@@ -38,7 +34,9 @@ const HeroStyles = styled.div`
     border-radius: 5px;
     padding: 1.5rem;
     cursor: pointer;
-    box-shadow: 5px 5px 10px grey;
+  }
+  button:hover {
+    box-shadow: 5px 5px 5px var(--blueTransparent);
   }
 
   .hero-card-image {
@@ -46,26 +44,29 @@ const HeroStyles = styled.div`
     max-width: 360px;
     background: linear-gradient(210deg, var(--purple), var(--blue));
     border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
-    box-shadow: 5px 5px 10px grey;
+    box-shadow: 5px 5px 10px var(--blueTransparent);
   }
 
   @media (min-width: 800px) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 100px 2fr 1fr;
+    text-align: left;
 
     .hero-card:first-child {
       text-align: left;
-      padding-right: 1rem;
     }
-    .hero-card:last-child {
-      padding-left: 1rem;
+
+    .hero-social-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    .hero-card:last-child:before {
-      left: 20px;
-      bottom: 380px;
-      transform: rotate(60deg);
-      -webkit-transform: rotate(60deg);
-      -moz-transform: rotate(60deg);
+
+    .hero-social-icon {
+      margin: 1.5rem 0;
+      font-size: 2.25rem;
+      cursor: pointer;
     }
+
     .hero-card-image {
       margin: 2rem 0;
     }
@@ -77,6 +78,11 @@ const Hero = ({ heroImage }) => {
 
   return (
     <HeroStyles className='hero'>
+      <div className='hero-social-container'>
+        <InstagramIcon className='hero-social-icon' />
+        <LinkedInIcon className='hero-social-icon' />
+        <EmailIcon className='hero-social-icon' />
+      </div>
       <div className='hero-card'>
         <h2>Hi, I'm Josh</h2>
         <h3>Frontend Developer</h3>

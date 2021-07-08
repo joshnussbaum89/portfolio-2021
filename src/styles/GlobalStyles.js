@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     :root {
         ${'' /* Colors */}
         --blue: #3A0CF7;
+        --blueTransparent: #e5e1fa;
         --purple: #6900E0;
         ${'' /* Font Sizes */}
         --medium: 1.5rem;
@@ -17,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         font-family: 'Poppins', sans-serif;    
         margin: 0 1rem;
+        background: white;
     }
 
     h1 {

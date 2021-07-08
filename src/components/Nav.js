@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 
 const NavStyles = styled.nav`
   display: flex;
@@ -31,6 +32,7 @@ const NavStyles = styled.nav`
   @media (min-width: 800px) {
     ul {
       display: flex;
+      align-items: center;
     }
   }
 `;
@@ -51,6 +53,9 @@ const Nav = () => {
         </li>
         <li>
           <Link to='/'>Contact</Link>
+        </li>
+        <li>
+          <Brightness4Icon />
         </li>
       </ul>
     </NavStyles>
